@@ -382,6 +382,14 @@ a { color: inherit; }
 /* ---------- Patička ---------- */
 .paticka { background: var(--text); color: #E8E0D5; padding-block: 2.5rem; margin-bottom: 76px; }
 @media (min-width: 721px) { .paticka { margin-bottom: 0; } }
+.paticka__odkazy {
+  display: flex; flex-wrap: wrap; gap: .35rem 1.4rem;
+  padding-bottom: 1.4rem; margin-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(232,224,213,.18);
+  font-size: .9rem;
+}
+.paticka__odkazy a { color: #C9C0B2; text-decoration: none; }
+.paticka__odkazy a:hover { color: #FBF8F3; text-decoration: underline; }
 .paticka__obal { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; align-items: center; font-size: .9rem; }
 .paticka a { color: #E8E0D5; }
 .paticka__radek { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; }

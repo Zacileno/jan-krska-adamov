@@ -9,6 +9,15 @@
   const $  = (s, k = document) => k.querySelector(s);
   const $$ = (s, k = document) => Array.from(k.querySelectorAll(s));
 
+  /** Doplní obrázku rozměry ze souboru data/rozmery.js.
+   *  Prohlížeč tak ví, kolik místa mu nechat, ještě než ho stáhne — stránka
+   *  při načítání neposkakuje. */
+  function rozmery(img, cesta) {
+    const r = (typeof ROZMERY !== 'undefined') && ROZMERY[cesta];
+    if (r) { img.width = r[0]; img.height = r[1]; }
+    return img;
+  }
+
   /** Bezpečně vloží text (ne HTML) do všech prvků odpovídajících selektoru. */
   function text(sel, hodnota) {
     $$(sel).forEach(el => { el.textContent = hodnota; });
@@ -95,6 +104,7 @@
   const obalVidea = $('[data-video]');
   const nahled = document.createElement('img');
   nahled.src = D.video.nahled;
+  rozmery(nahled, D.video.nahled);
   nahled.alt = '';
   nahled.loading = 'lazy';
 
@@ -129,7 +139,9 @@
   let aktualni = null;   // pole { velky, nahled, popis } pro zvětšení
 
   function cestaK(skupina, i, nahledova) {
-    return `assets/fotky/${skupina.id}/${skupina.id}-${String(i).padStart(2, '0')}${nahledova ? '-nahled' : ''}.webp`;
+    const predpona = D.web.predponaSouboru;
+    const cislo = String(i).padStart(2, '0');
+    return `assets/fotky/${skupina.id}/${predpona}-${skupina.id}-${cislo}${nahledova ? '-nahled' : ''}.webp`;
   }
 
   function vykresliSkupinu(skupina) {
@@ -159,6 +171,7 @@
       img.alt = f.popis;
       img.loading = i < 4 ? 'eager' : 'lazy';
       img.decoding = 'async';
+      rozmery(img, f.nahled);
       b.append(img);
       b.addEventListener('click', () => otevriLupu(i));
       return b;
@@ -211,8 +224,9 @@
   pudorysBtn.setAttribute('aria-label', 'Zvětšit půdorys');
   const pudorysImg = document.createElement('img');
   pudorysImg.src = D.pudorys.nahled;
-  pudorysImg.alt = 'Půdorys domu';
+  pudorysImg.alt = 'Půdorys přízemního rodinného domu 5+kk v Adamově';
   pudorysImg.loading = 'lazy';
+  rozmery(pudorysImg, D.pudorys.nahled);
   pudorysBtn.append(pudorysImg);
   pudorysBtn.addEventListener('click', () => {
     aktualni = [{ velky: D.pudorys.obrazek, popis: 'Půdorys domu' }];
@@ -227,8 +241,9 @@
 
   const mapaImg = document.createElement('img');
   mapaImg.src = L.mapaObrazek;
-  mapaImg.alt = 'Poloha domu v obci Adamov';
+  mapaImg.alt = 'Letecký pohled na Adamov s vyznačenou polohou nabízeného domu';
   mapaImg.loading = 'lazy';
+  rozmery(mapaImg, L.mapaObrazek);
   // Velký snímek je letecká fotka, ne mapa — odkaz do map patří k malé mapce níž.
   $('[data-lokalita-mapa]').append(mapaImg);
 
@@ -253,8 +268,9 @@
 
     const obr = document.createElement('img');
     obr.src = L.mapaVyrez;
-    obr.alt = 'Mapa okolí s vyznačenou polohou domu';
+    obr.alt = 'Mapa Adamova u Českých Budějovic s vyznačenou polohou domu';
     obr.loading = 'lazy';
+    rozmery(obr, L.mapaVyrez);
 
     const popis = document.createElement('span');
     popis.className = 'mapka__popis';
@@ -273,6 +289,7 @@
   if (K.foto) {
     const img = document.createElement('img');
     img.src = K.foto; img.alt = K.jmeno; img.loading = 'lazy';
+    rozmery(img, K.foto);
     portret.append(img);
   } else {
     // Bez fotky zobrazíme iniciály — místo pro fotku zůstává připravené.

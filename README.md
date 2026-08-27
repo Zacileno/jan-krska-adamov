@@ -135,6 +135,36 @@ nastavovala cookies ještě před souhlasem.
 
 ---
 
+## SEO
+
+Hotové: `robots.txt`, generovaná `sitemap.xml`, meta tagy s `canonical`, Open Graph
+a Twitter cards na obou stránkách, náhled sdílení 1200 × 630, favicon i apple-touch-icon,
+obrázky ve WebP s lazy loadingem a rozměry, mluvící názvy souborů, alt texty,
+prolinkování v patičce a strukturovaná data JSON-LD
+(Organization + WebSite + RealEstateListing na hlavní stránce, BreadcrumbList v zásadách).
+
+**Adresa webu je na jednom místě** — `data/nemovitost.js` → `web.adresa`. Po nasazení
+na Vercel ji přepiš na skutečnou doménu a znovu pusť generátor sitemapy, jinak
+`canonical` i sitemapa míří jinam, než web doopravdy běží.
+
+### Dva skripty, které se pouštějí ručně
+
+```bash
+python3 nastroje/generuj-sitemap.py    # po každé změně obsahu nebo přidání stránky
+python3 nastroje/generuj-rozmery.py    # po každé výměně fotek
+```
+
+`generuj-rozmery.py` zapisuje `data/rozmery.js` — z něj se obrázkům doplňují rozměry,
+aby stránka při načítání neposkakovala. Ten soubor se nikdy needituje ručně.
+
+### Co se záměrně nedělá
+
+`SearchAction` ve strukturovaných datech chybí, protože web nemá vyhledávání.
+Označit ho, když neexistuje, je nepravdivé a Google to ignoruje nebo penalizuje.
+Až by na webu vyhledávání bylo, doplní se.
+
+---
+
 ## Nasazení
 
 ```
@@ -156,3 +186,5 @@ fotek a videí, které na GitHub nepatří.
 - [ ] ID pro GA4 a Meta pixel
 - [ ] Adresa Apps Scriptu pro formulář
 - [ ] Půdorys bez cizího vodoznaku
+- [ ] Po nasazení přepsat `web.adresa` na skutečnou doménu a pustit generátor sitemapy
+- [ ] Vložit sitemapu do Google Search Console

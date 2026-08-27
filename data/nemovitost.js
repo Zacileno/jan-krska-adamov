@@ -7,6 +7,18 @@
 
 const NEMOVITOST = {
 
+  /* --- Adresa webu ----------------------------------------------------------
+   * POZOR: po nasazení na Vercel sem patří skutečná adresa, bez lomítka na konci.
+   * Používá se pro canonical, sitemapu, Open Graph a strukturovaná data — dokud
+   * nesedí, vyhledávače i Facebook míří na neexistující stránku.
+   * ------------------------------------------------------------------------ */
+  web: {
+    adresa: 'https://jan-krska-adamov.vercel.app',
+    // Předpona názvů obrázků. Kvůli vyhledávání obrázků má soubor říkat,
+    // co je na něm — ne IMG_2841.webp.
+    predponaSouboru: 'dum-adamov-5kk',
+  },
+
   /* --- Značka a hlavička --------------------------------------------------- */
   znacka: {
     nazev: 'JK nemovitosti',
@@ -74,8 +86,8 @@ const NEMOVITOST = {
 
   /* --- Video --------------------------------------------------------------- */
   video: {
-    soubor: 'assets/video/adamov.mp4',
-    nahled: 'assets/video/poster.webp',
+    soubor: 'assets/video/dum-adamov-5kk-prohlidka.mp4',
+    nahled: 'assets/video/dum-adamov-5kk-video-nahled.webp',
     nadpis: 'Podívejte se na váš nový rodinný dům ve 2 minutách',
     popis: '',
   },
@@ -179,8 +191,8 @@ const NEMOVITOST = {
 
   /* --- Půdorys ------------------------------------------------------------- */
   pudorys: {
-    obrazek: 'assets/pudorys/pudorys.webp',
-    nahled: 'assets/pudorys/pudorys-nahled.webp',
+    obrazek: 'assets/pudorys/dum-adamov-5kk-pudorys.webp',
+    nahled: 'assets/pudorys/dum-adamov-5kk-pudorys-nahled.webp',
     popis: 'Celý dům v jedné rovině. Kliknutím si půdorys zvětšíte.',
   },
 
@@ -193,10 +205,10 @@ const NEMOVITOST = {
           's občanskou vybaveností. Do centra Českých Budějovic to trvá přibližně 9 minut, ' +
           'dálnice D3 je vzdálena pouhých 6 minut jízdy autem a v blízkosti je hlavní tah ' +
           'na Třeboň. V obci je mateřská škola i autobusové spojení pro školáky.',
-    mapaObrazek: 'assets/fotky/zvysky/zvysky-09.webp',
+    mapaObrazek: 'assets/fotky/zvysky/dum-adamov-5kk-zvysky-09.webp',
     // Malá mapa v mřížce vybavenosti. Je to obrázek stažený předem,
     // takže se za návštěvníka nic nenačítá z cizího serveru.
-    mapaVyrez: 'assets/mapa/mapa.webp',
+    mapaVyrez: 'assets/mapa/dum-adamov-5kk-mapa.webp',
     mapaOdkaz: 'https://mapy.cz/zakladni?q=K%20Rybn%C3%ADku%2C%20Adamov%20u%20%C4%8Cesk%C3%BDch%20Bud%C4%9Bjovic',
     doprava: [
       ['Autobusová zastávka Adamov, Na Lukách', '85 m'],
