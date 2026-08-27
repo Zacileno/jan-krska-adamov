@@ -4,3 +4,6 @@ podklady/
 
 # macOS
 .DS_Store
+
+# Interní poznámky k projektu, nepatří do veřejného repozitáře.
+CLAUDE.md
