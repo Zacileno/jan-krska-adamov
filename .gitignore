@@ -1,0 +1,6 @@
+# Originální podklady — fotky ve full rozlišení a 4K videa (skoro 900 MB).
+# Na web ani na GitHub nepatří, zůstávají jen na disku.
+podklady/
+
+# macOS
+.DS_Store

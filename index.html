@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novostavba 5+kk, 193 m² — Adamov u Českých Budějovic</title>
+<meta name="description" content="Přízemní zděná novostavba 5+kk s garáží, jižní terasou a pozemkem 815 m² v Adamově u Českých Budějovic. Energetická třída B. Cena 17 499 000 Kč.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Novostavba 5+kk, 193 m² — Adamov u Českých Budějovic">
+<meta property="og:description" content="Přízemní dům s garáží, jižní terasou a pozemkem 815 m². Energetická třída B. 17 499 000 Kč.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preload" as="image" href="assets/fotky/hero.webp" fetchpriority="high">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%235F6F55'/><text x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-weight='600' font-size='46' fill='%23FAF7F2'>JK</text></svg>">
+</head>
+
+<body>
+
+<!-- ============ HLAVIČKA ============ -->
+<header class="hlavicka" id="hlavicka">
+  <div class="obal hlavicka__obal">
+    <span class="znacka" data-znacka></span>
+    <nav class="hlavicka__akce">
+      <a class="tel-odkaz" data-tel-href><span class="tel-odkaz__ikona" aria-hidden="true">☎</span><span data-tel-text></span></a>
+      <a class="tlacitko tlacitko--hlavni tlacitko--male" href="#poptavka">Rezervovat prohlídku</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ ÚVODNÍ BLOK ============ -->
+<section class="hero">
+  <img class="hero__foto" src="assets/fotky/hero.webp" alt="" fetchpriority="high" decoding="async">
+  <div class="hero__zaves"></div>
+  <div class="obal hero__obsah">
+    <p class="hero__stitek" data-hero-typ></p>
+    <h1 class="hero__nadpis"><span data-hero-nadpis></span></h1>
+    <p class="hero__lokalita">
+      <svg class="hero__spendlik" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.2 6.3 12.4 6.6 12.7a.5.5 0 00.8 0C12.7 21.4 19 14.2 19 9a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/>
+      </svg>
+      <span data-hero-lokalita></span>
+    </p>
+    <p class="hero__cena"><span data-hero-cena></span><small data-hero-cena-pozn></small></p>
+    <ul class="hero__body" data-hero-zvyrazneni></ul>
+    <div class="hero__tlacitka">
+      <a class="tlacitko tlacitko--hlavni" href="#poptavka">Rezervovat prohlídku</a>
+      <a class="tlacitko tlacitko--obrys" data-tel-href>Zavolat</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÚVODNÍ TEXT ============ -->
+<section class="sekce sekce--uzka" id="o-domu">
+  <h2 class="nadpis" data-uvod-nadpis></h2>
+  <div class="text" data-uvod-text></div>
+  <div class="vyzva"><a class="tlacitko tlacitko--hlavni" href="#poptavka">Chci se přijít podívat</a></div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="sekce" id="video">
+  <h2 class="nadpis" data-video-nadpis></h2>
+  <p class="podnadpis" data-video-popis></p>
+  <div class="video" data-video></div>
+</section>
+
+<!-- ============ GALERIE ============ -->
+<section class="sekce" id="galerie">
+  <h2 class="nadpis">Fotografie</h2>
+  <div class="zalozky" role="tablist" data-zalozky></div>
+  <p class="upozorneni" data-galerie-upozorneni hidden></p>
+  <div class="mrizka" data-mrizka></div>
+  <div class="vyzva"><a class="tlacitko tlacitko--hlavni" href="#poptavka">Rezervovat prohlídku</a></div>
+</section>
+
+<!-- ============ PARAMETRY ============ -->
+<section class="sekce" id="parametry">
+  <h2 class="nadpis">Parametry nemovitosti</h2>
+  <div class="parametry" data-parametry></div>
+</section>
+
+<!-- ============ PŮDORYS ============ -->
+<section class="sekce sekce--uzka" id="pudorys">
+  <h2 class="nadpis">Půdorys</h2>
+  <p class="podnadpis" data-pudorys-popis></p>
+  <div data-pudorys></div>
+  <div class="vyzva"><a class="tlacitko tlacitko--hlavni" href="#poptavka">Chci vidět dům naživo</a></div>
+</section>
+
+<!-- ============ LOKALITA ============ -->
+<section class="sekce" id="lokalita">
+  <h2 class="nadpis" data-lokalita-nadpis></h2>
+  <p class="podnadpis" data-lokalita-uvod></p>
+  <div class="lokalita">
+    <div class="lokalita__mapa" data-lokalita-mapa></div>
+    <div class="lokalita__data">
+      <div class="karta karta--doprava">
+        <h3 class="karta__nadpis">Dostupnost</h3>
+        <ul class="seznam" data-lokalita-doprava></ul>
+      </div>
+      <div class="vybavenost" data-lokalita-vybavenost></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="sekce sekce--uzka" id="kontakt">
+  <div class="makler" data-makler></div>
+</section>
+
+<!-- ============ FORMULÁŘ ============ -->
+<section class="sekce sekce--uzka" id="poptavka">
+  <div class="poptavka">
+    <h2 class="nadpis nadpis--stred" data-form-nadpis></h2>
+    <p class="podnadpis podnadpis--stred" data-form-podnadpis></p>
+
+    <form class="formular" data-formular novalidate>
+      <div class="pole">
+        <label for="f-jmeno">Jméno a příjmení</label>
+        <input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required>
+      </div>
+      <div class="pole pole--pul">
+        <label for="f-telefon">Telefon</label>
+        <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required>
+      </div>
+      <div class="pole pole--pul">
+        <label for="f-email">E-mail</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="pole">
+        <label for="f-zprava">Zpráva <span class="volitelne">(nepovinné)</span></label>
+        <textarea id="f-zprava" name="zprava" rows="3" placeholder="Kdy by se vám hodila prohlídka?"></textarea>
+      </div>
+
+      <!-- Past na roboty: člověk tohle pole nevidí, robot ho vyplní a odeslání se zahodí. -->
+      <div class="past" aria-hidden="true">
+        <label for="f-web">Webová stránka</label>
+        <input id="f-web" name="web" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <label class="souhlas">
+        <input type="checkbox" name="souhlas" required>
+        <span data-form-souhlas></span>
+      </label>
+
+      <button class="tlacitko tlacitko--hlavni tlacitko--siroke" type="submit" data-odeslat>
+        Odeslat poptávku
+      </button>
+
+      <p class="hlaska" data-hlaska role="status" aria-live="polite" hidden></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ PATIČKA ============ -->
+<footer class="paticka">
+  <div class="obal paticka__obal" data-paticka></div>
+</footer>
+
+<!-- ============ MOBILNÍ LIŠTA ============ -->
+<div class="lista" data-lista>
+  <a class="lista__tlacitko lista__tlacitko--obrys" data-tel-href>Zavolat</a>
+  <a class="lista__tlacitko lista__tlacitko--hlavni" href="#poptavka">Prohlídka</a>
+</div>
+
+<!-- ============ ZVĚTŠENÍ OBRÁZKU ============ -->
+<div class="lupa" data-lupa hidden>
+  <button class="lupa__zavrit" data-lupa-zavrit aria-label="Zavřít">✕</button>
+  <button class="lupa__sip lupa__sip--vlevo" data-lupa-vlevo aria-label="Předchozí">‹</button>
+  <button class="lupa__sip lupa__sip--vpravo" data-lupa-vpravo aria-label="Další">›</button>
+  <figure class="lupa__ram">
+    <img data-lupa-obrazek alt="">
+    <figcaption data-lupa-popis></figcaption>
+  </figure>
+</div>
+
+<!-- ============ LIŠTA SE SOUHLASEM ============ -->
+<div class="cookies" data-cookies hidden>
+  <p>
+    Na stránce používáme měřicí nástroje, abychom věděli, jestli reklama dává smysl.
+    Bez vašeho souhlasu se nespustí.
+  </p>
+  <div class="cookies__tlacitka">
+    <button class="tlacitko tlacitko--obrys tlacitko--male" data-cookies-odmitnout>Odmítnout</button>
+    <button class="tlacitko tlacitko--hlavni tlacitko--male" data-cookies-prijmout>Souhlasím</button>
+  </div>
+</div>
+
+<script src="data/nemovitost.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
