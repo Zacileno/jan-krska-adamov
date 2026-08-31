@@ -104,6 +104,15 @@ stejném poměru stran jako video.
 Poptávky přijímá Google Apps Script, který je zapíše do Google tabulky a pošle
 e-mailem. Návod na zprovoznění je v komentáři na začátku `apps-script/Code.gs`.
 
+Skript zapíše poptávku hned, upozorňovací e-maily odchází v dávce **každých
+15 minut**. V každém e-mailu je tlačítko *Označit jako vyřešeno*, které
+zaškrtne sloupec Vyřešeno v tabulce; zaškrtnout jde i ručně. **Každé pondělí
+v 8:00** přijde přehled nevyřešených poptávek — a přijde i při nule, jako
+kontrola, že skript běží.
+
+Povinná jsou pole jméno, telefon, e-mail a souhlas se zpracováním údajů;
+nepovinná je jen zpráva. Kontroluje to prohlížeč i skript v tabulce.
+
 Výslednou adresu skriptu (končí na `/exec`) vlož do `data/nemovitost.js`
 do pole `formular.adresaSkriptu`. **Dokud je prázdná, formulář nic neodešle**
 a návštěvníkovi napíše, ať zavolá.

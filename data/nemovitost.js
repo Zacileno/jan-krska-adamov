@@ -21,7 +21,7 @@ const NEMOVITOST = {
 
   /* --- Značka a hlavička --------------------------------------------------- */
   znacka: {
-    nazev: 'JK nemovitosti',
+    nazev: 'Krška nemovitosti',
     monogram: 'JK',        // písmena v zeleném kolečku loga
     // Až se značka změní, stačí přepsat tyhle dva řádky.
   },
@@ -35,7 +35,7 @@ const NEMOVITOST = {
     email: 'jan-krska@seznam.cz',
     // Fotku doplníš tak, že sem napíšeš cestu, např. 'assets/makler/jan-krska.webp'.
     // Když je prázdné, zobrazí se místo fotky iniciály.
-    foto: '',
+    foto: 'assets/makler/jan-krska.webp',
     predstaveni: 'Jednáte přímo se mnou, bez realitní kanceláře mezi námi. ' +
                  'Na prohlídku se domluvíme podle vás, klidně i večer nebo o víkendu.',
   },
@@ -249,7 +249,7 @@ const NEMOVITOST = {
    * Dokud je prázdná, formulář se neodešle a napíše to na obrazovku.
    * ------------------------------------------------------------------------ */
   formular: {
-    adresaSkriptu: '',
+    adresaSkriptu: 'https://script.google.com/macros/s/AKfycbyReQo5a4TEgwBLzmME0yCoqcEtJ_x4dDk0jwkKG-zS5YvlNFlY3LXQVldDn5UowpaM/exec',
     nadpis: 'Domluvte si prohlídku',
     podnadpis: 'Ozvu se vám do 24 hodin. V případě, že si chcete domluvit termín ' +
                'okamžitě, jsem k dispozici na telefonu.',

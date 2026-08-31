@@ -15,7 +15,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Osvětlená novostavba přízemního rodinného domu v Adamově za soumraku">
-<meta property="og:site_name" content="JK nemovitosti">
+<meta property="og:site_name" content="Krška nemovitosti">
 <meta property="og:locale" content="cs_CZ">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -41,7 +41,7 @@
     {
       "@type": "Organization",
       "@id": "https://jan-krska-adamov.vercel.app/#organizace",
-      "name": "JK nemovitosti",
+      "name": "Krška nemovitosti",
       "url": "https://jan-krska-adamov.vercel.app/",
       "telephone": "+420606489134",
       "email": "jan-krska@seznam.cz",
@@ -58,7 +58,7 @@
     {
       "@type": "WebSite",
       "@id": "https://jan-krska-adamov.vercel.app/#web",
-      "name": "JK nemovitosti",
+      "name": "Krška nemovitosti",
       "url": "https://jan-krska-adamov.vercel.app/",
       "inLanguage": "cs",
       "publisher": { "@id": "https://jan-krska-adamov.vercel.app/#organizace" }
@@ -107,7 +107,6 @@
   ]
 }
 </script>
-<circle cx='50' cy='50' r='50' fill='%235F6F55'/><text x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-weight='600' font-size='46' fill='%23FAF7F2'>JK</text></svg>">
 </head>
 
 <body>
@@ -213,15 +212,15 @@
 
     <form class="formular" data-formular novalidate>
       <div class="pole">
-        <label for="f-jmeno">Jméno a příjmení</label>
+        <label for="f-jmeno">Jméno a příjmení <span class="povinne" aria-hidden="true">*</span></label>
         <input id="f-jmeno" name="jmeno" type="text" autocomplete="name" required>
       </div>
       <div class="pole pole--pul">
-        <label for="f-telefon">Telefon</label>
+        <label for="f-telefon">Telefon <span class="povinne" aria-hidden="true">*</span></label>
         <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required>
       </div>
       <div class="pole pole--pul">
-        <label for="f-email">E-mail</label>
+        <label for="f-email">E-mail <span class="povinne" aria-hidden="true">*</span></label>
         <input id="f-email" name="email" type="email" autocomplete="email" required>
       </div>
       <div class="pole">
@@ -239,6 +238,8 @@
         <input type="checkbox" name="souhlas" required>
         <span data-form-souhlas></span>
       </label>
+
+      <p class="povinne-pozn">Pole označená <span class="povinne" aria-hidden="true">*</span> jsou povinná.</p>
 
       <button class="tlacitko tlacitko--hlavni tlacitko--siroke" type="submit" data-odeslat>
         Odeslat poptávku

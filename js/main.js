@@ -26,7 +26,7 @@
   /* ============ ZNAČKA A KONTAKT ============ */
 
   /** Logo = zelené kolečko s monogramem a zbytek názvu vedle něj.
-   *  Když název začíná monogramem (JK nemovitosti), písmena se vedle kolečka
+   *  Když název začíná monogramem, písmena se vedle kolečka
    *  neopakují — v textu zůstane jen „nemovitosti". Celé jméno značky si
    *  odnesou čtečky pro nevidomé. */
   function logo() {
@@ -287,6 +287,7 @@
   const portret = document.createElement('div');
   portret.className = 'makler__portret';
   if (K.foto) {
+    portret.classList.add('makler__portret--foto');
     const img = document.createElement('img');
     img.src = K.foto; img.alt = K.jmeno; img.loading = 'lazy';
     rozmery(img, K.foto);
@@ -356,6 +357,16 @@
     hlaska.hidden = false;
   }
 
+  /** Číslo tohoto odeslání. Drží se, dokud se poptávka nepodaří odeslat. */
+  let idOdeslani = null;
+  function cisloOdeslani() {
+    if (!idOdeslani) {
+      idOdeslani = (crypto.randomUUID && crypto.randomUUID()) ||
+                   ('ID' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8));
+    }
+    return idOdeslani;
+  }
+
   /** Jednoduchá kontrola, aby se neposílaly zjevně nesmyslné údaje. */
   function zkontroluj(data) {
     const chyby = [];
@@ -410,6 +421,9 @@
         mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
+          // Číslo odeslání: kdyby se stejná poptávka odeslala dvakrát
+          // (nepovedený pokus, druhé kliknutí), skript druhý řádek nezaloží.
+          requestId:  cisloOdeslani(),
           jmeno:      data.jmeno,
           telefon:    data.telefon,
           email:      data.email,
@@ -421,6 +435,7 @@
       });
 
       localStorage.setItem('krska-odeslano', String(Date.now()));
+      idOdeslani = null;
       formular.reset();
       zprava(F.dekujeme, 'ok');
       hlaska.scrollIntoView({ block: 'center', behavior: 'smooth' });
