@@ -32,7 +32,7 @@ const NEMOVITOST = {
     role: 'Prodej nemovitosti',
     telefon: '+420 606 489 134',
     telefonLink: '+420606489134',   // bez mezer, pro klikání na mobilu
-    email: 'jan-krska@seznam.cz',
+    email: 'info@nemovitostikrska.cz',
     // Fotku doplníš tak, že sem napíšeš cestu, např. 'assets/makler/jan-krska.webp'.
     // Když je prázdné, zobrazí se místo fotky iniciály.
     foto: 'assets/makler/jan-krska.webp',
