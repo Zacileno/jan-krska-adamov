@@ -13,7 +13,7 @@ const NEMOVITOST = {
    * nesedí, vyhledávače i Facebook míří na neexistující stránku.
    * ------------------------------------------------------------------------ */
   web: {
-    adresa: 'https://jan-krska-adamov.vercel.app',
+    adresa: 'https://www.nemovitostikrska.cz',
     // Předpona názvů obrázků. Kvůli vyhledávání obrázků má soubor říkat,
     // co je na něm — ne IMG_2841.webp.
     predponaSouboru: 'dum-adamov-5kk',
@@ -21,8 +21,8 @@ const NEMOVITOST = {
 
   /* --- Značka a hlavička --------------------------------------------------- */
   znacka: {
-    nazev: 'Krška nemovitosti',
-    monogram: 'JK',        // písmena v zeleném kolečku loga
+    nazev: 'Nemovitosti Krška',
+    monogram: 'NK',        // písmena ve faviconě a na ikoně pro mobil
     // Až se značka změní, stačí přepsat tyhle dva řádky.
   },
 

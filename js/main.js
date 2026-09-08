@@ -1,5 +1,5 @@
 /* =========================================================
-   Krška nemovitosti — vykreslení stránky a chování
+   Nemovitosti Krška — vykreslení stránky a chování
    Všechna data se berou z data/nemovitost.js.
    ========================================================= */
 (function () {
@@ -25,31 +25,17 @@
 
   /* ============ ZNAČKA A KONTAKT ============ */
 
-  /** Logo = zelené kolečko s monogramem a zbytek názvu vedle něj.
-   *  Když název začíná monogramem, písmena se vedle kolečka
-   *  neopakují — v textu zůstane jen „nemovitosti". Celé jméno značky si
-   *  odnesou čtečky pro nevidomé. */
+  /** Logo = celý název značky jako text. Monogram z `D.znacka` se používá
+   *  jen ve faviconě a na ikoně pro mobil, na stránce ne. */
   function logo() {
-    const { nazev, monogram } = D.znacka;
-    const zbytek = nazev.startsWith(monogram + ' ')
-      ? nazev.slice(monogram.length + 1)
-      : nazev;
-
     const obal = document.createElement('span');
     obal.className = 'logo';
-    obal.setAttribute('aria-label', nazev);
-
-    const znak = document.createElement('span');
-    znak.className = 'logo__znak';
-    znak.textContent = monogram;
-    znak.setAttribute('aria-hidden', 'true');
 
     const text = document.createElement('span');
     text.className = 'logo__nazev';
-    text.textContent = zbytek;
-    text.setAttribute('aria-hidden', 'true');
+    text.textContent = D.znacka.nazev;
 
-    obal.append(znak, text);
+    obal.append(text);
     return obal;
   }
 

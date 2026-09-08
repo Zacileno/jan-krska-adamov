@@ -1,4 +1,4 @@
-# Krška nemovitosti — prodejní stránka nemovitosti
+# Nemovitosti Krška — prodejní stránka nemovitosti
 
 Jednostránkový web pro **jednu konkrétní nemovitost**, na který vedou placené reklamy.
 Cílem stránky je z návštěvníka udělat poptávku na prohlídku — proto se tlačítko

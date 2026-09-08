@@ -259,7 +259,7 @@ function doGet(e) {
     return json({ ok: true, nalezeno: najdiRadekPodleId(sh, String(p.id), true) > 0 });
   }
 
-  return stranka('Krška nemovitosti — evidence poptávek běží.', '#333');
+  return stranka('Nemovitosti Krška — evidence poptávek běží.', '#333');
 }
 
 /* ============ KONTROLA NOVÝCH POPTÁVEK (každých 15 minut) ============ */
@@ -367,7 +367,7 @@ function tydenniPrehled() {
 
   MailApp.sendEmail({
     to: NOTIFY_EMAIL,
-    subject: 'Krška nemovitosti — nevyřešené poptávky (' + pocet + ')',
+    subject: 'Nemovitosti Krška — nevyřešené poptávky (' + pocet + ')',
     body: 'Nevyřešených poptávek: ' + pocet + '. Detail je v HTML verzi e-mailu.',
     htmlBody: html,
   });

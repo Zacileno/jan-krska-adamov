@@ -1,4 +1,4 @@
-# Zadání projektu — prodejní stránka Krška nemovitosti
+# Zadání projektu — prodejní stránka Nemovitosti Krška
 
 Zapsáno 27. srpna 2026 podle rozhovoru s Michaelou.
 
@@ -17,7 +17,7 @@ Nevzniká z toho web realitní kanceláře. Pro každou další nemovitost se st
 
 | Věc | Rozhodnutí | Proč |
 |---|---|---|
-| Značka | Pracovně **Krška nemovitosti** | Jan své jméno v názvu nechce; v kódu je na jednom místě, aby šlo vyměnit |
+| Značka | Pracovně **Nemovitosti Krška** | Jan své jméno v názvu nechce; v kódu je na jednom místě, aby šlo vyměnit |
 | Technologie | Statické HTML/CSS/JS | Na Vercelu zdarma, načte se okamžitě — u placené návštěvnosti rozhoduje každá vteřina |
 | Formulář | Google Apps Script → tabulka + e-mail | Zdarma, bez další služby, poptávky vidí Michaela hned v tabulce |
 | Měření | Meta pixel + GA4 | Kampaně poběží na Metě; pixel se spustí až po souhlasu s cookies |
