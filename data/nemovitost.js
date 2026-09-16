@@ -262,6 +262,8 @@ const NEMOVITOST = {
    * Nech prázdné, dokud nemáš skutečná ID. Prázdná hodnota = kód se nevloží.
    * Meta pixel se spustí až po souhlasu s cookies.
    * ------------------------------------------------------------------------ */
+  // Web má GTM (GTM-NCGHG8T5). Když se GA4 a pixel nastaví v GTM,
+  // tady nechat prázdné, jinak se bude měřit dvakrát.
   mereni: {
     ga4: '',        // např. 'G-XXXXXXXXXX'
     metaPixel: '',  // např. '123456789012345'

@@ -3,6 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Souhlas s cookies (Google Consent Mode): bez souhlasu je měření zakázané.
+     Souhlas ukládá lišta v js/main.js pod klíčem krska-souhlas. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var souhlas = null;
+  try { souhlas = localStorage.getItem('krska-souhlas'); } catch (e) {}
+  var stav = souhlas === 'ano' ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    ad_storage: stav, ad_user_data: stav, ad_personalization: stav, analytics_storage: stav
+  });
+  if (souhlas === 'ano') dataLayer.push({ event: 'souhlas_udelen' });
+})();
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NCGHG8T5');</script>
+<!-- End Google Tag Manager -->
 <title>Novostavba 5+kk, 193 m² — Adamov u Českých Budějovic</title>
 <meta name="description" content="Přízemní zděná novostavba 5+kk, 193 m², pozemek 815 m² s garáží a jižní terasou v Adamově u Českých Budějovic. Energetická třída B, cena 17 499 000 Kč.">
 <link rel="canonical" href="https://www.nemovitostikrska.cz/">
@@ -110,6 +134,10 @@
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCGHG8T5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ============ HLAVIČKA ============ -->
 <header class="hlavicka" id="hlavicka">

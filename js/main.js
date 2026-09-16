@@ -427,7 +427,8 @@
       hlaska.scrollIntoView({ block: 'center', behavior: 'smooth' });
 
       // Konverze do měřicích nástrojů
-      if (window.gtag) window.gtag('event', 'generate_lead', { value: 1 });
+      window.dataLayer.push({ event: 'generate_lead' });
+      if (D.mereni.ga4) window.gtag('event', 'generate_lead', { value: 1 });
       if (window.fbq)  window.fbq('track', 'Lead');
     } catch (err) {
       zprava(F.chyba, 'chyba');
@@ -564,8 +565,10 @@
   window.addEventListener('scroll', prepni, { passive: true });
 
   /* ============ MĚŘENÍ A SOUHLAS S COOKIES ============
-     GA4 i Meta pixel se vloží teprve po souhlasu. Bez souhlasu se
-     na stránce nespustí žádný cizí skript. */
+     GTM se načítá vždy (v <head>), ale s Consent Mode nastaveným na „zakázáno".
+     Po souhlasu se pošle consent update a událost souhlas_udelen — na ni
+     musí být v GTM navázané značky mimo Google (Meta pixel apod.).
+     GA4 i Meta pixel z D.mereni se vloží teprve po souhlasu. */
   const KLIC_SOUHLAS = 'krska-souhlas';
   const cookies = $('[data-cookies]');
 
@@ -594,7 +597,8 @@
   }
 
   const ulozeno = localStorage.getItem(KLIC_SOUHLAS);
-  const jeCoMerit = Boolean(D.mereni.ga4 || D.mereni.metaPixel);
+  // GTM je na stránce vždy, takže lišta se souhlasem se ukazuje vždy
+  const jeCoMerit = true;
 
   if (jeCoMerit) {
     if (ulozeno === 'ano') {
@@ -607,6 +611,11 @@
   $('[data-cookies-prijmout]').addEventListener('click', () => {
     localStorage.setItem(KLIC_SOUHLAS, 'ano');
     cookies.hidden = true;
+    window.gtag('consent', 'update', {
+      ad_storage: 'granted', ad_user_data: 'granted',
+      ad_personalization: 'granted', analytics_storage: 'granted',
+    });
+    window.dataLayer.push({ event: 'souhlas_udelen' });
     nactiMereni();
   });
   $('[data-cookies-odmitnout]').addEventListener('click', () => {

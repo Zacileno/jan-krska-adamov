@@ -3,6 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Souhlas s cookies (Google Consent Mode): bez souhlasu je měření zakázané.
+     Souhlas ukládá lišta v js/main.js pod klíčem krska-souhlas. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var souhlas = null;
+  try { souhlas = localStorage.getItem('krska-souhlas'); } catch (e) {}
+  var stav = souhlas === 'ano' ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    ad_storage: stav, ad_user_data: stav, ad_personalization: stav, analytics_storage: stav
+  });
+  if (souhlas === 'ano') dataLayer.push({ event: 'souhlas_udelen' });
+})();
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NCGHG8T5');</script>
+<!-- End Google Tag Manager -->
 <title>Ochrana osobních údajů — Nemovitosti Krška</title>
 <meta name="description" content="Jak Jan Krška, IČO 72131667, nakládá s údaji z poptávkového formuláře na webu Nemovitosti Krška: co sbírá, proč, jak dlouho uchovává a jaká máte práva.">
 <meta name="robots" content="noindex, follow">
@@ -53,6 +77,10 @@
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCGHG8T5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="zasady">
   <a class="zpet" href="index.html">← Zpět na nemovitost</a>
