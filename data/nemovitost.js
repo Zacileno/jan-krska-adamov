@@ -46,7 +46,7 @@ const NEMOVITOST = {
     dispozice: '5+kk',
     plocha: '193 m²',
     lokalita: 'K Rybníku, Adamov u Českých Budějovic',
-    cena: '17 499 000 Kč',
+    cena: '16 499 000 Kč',
     cenaPoznamka: 'včetně pozemku 815 m²',
     // Čtyři nejsilnější údaje do úvodního bloku
     zvyrazneni: [
@@ -79,7 +79,7 @@ const NEMOVITOST = {
         'dveře se světlou výškou 2,10 m, světlovody pro přívod světla v chodbě a koupelně, ' +
         'podlahové topení napojené na tepelné čerpadlo voda-vzduch se zásobníkem na ohřev teplé ' +
         'vody 300 l Viessmann, použity byly italské dlažby a sanita, retenční nádrž na dešťovou ' +
-        'vodu 6 m³ s propojením na WC a zahradu, venkovní elektrické rolety, vrata a branky ' +
+        'vodu 6 m³ s propojením na WC a zahradu, příprava na venkovní elektrické rolety, vrata a branky ' +
         'budou součástí dodávky domu.' },
     ],
   },
@@ -184,7 +184,7 @@ const NEMOVITOST = {
       ['Koupelny', '2 — sprcha i vana'],
       ['Toalety', '3 + pisoár'],
       ['Povrchy', 'italské dlažby a sanita'],
-      ['Stínění', 'venkovní elektrické rolety'],
+      ['Stínění', 'příprava na venkovní elektrické rolety'],
       ['Vrata a branky', 'součástí dodávky'],
     ]},
   ],
