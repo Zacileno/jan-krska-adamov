@@ -46,7 +46,7 @@ const NEMOVITOST = {
     dispozice: '5+kk',
     plocha: '193 m²',
     lokalita: 'K Rybníku, Adamov u Českých Budějovic',
-    cena: '15 499 000 Kč',
+    cena: '14 499 000 Kč',
     cenaPoznamka: 'včetně pozemku 815 m²',
     // Čtyři nejsilnější údaje do úvodního bloku
     zvyrazneni: [

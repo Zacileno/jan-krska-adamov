@@ -13,7 +13,7 @@ Nasazuje se z GitHubu na Vercel.
 ## Aktuální nemovitost
 
 Novostavba rodinného domu 5+kk, 193 m², pozemek 815 m²,
-K Rybníku, Adamov u Českých Budějovic. Cena 15 499 000 Kč.
+K Rybníku, Adamov u Českých Budějovic. Cena 14 499 000 Kč.
 
 ---
 
